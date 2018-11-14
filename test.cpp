@@ -2,20 +2,14 @@
 using namespace std;
 int main(){
         griglia a;
-        a.printa();
+
+        int n=1;
+        int p=1;
 
 
-        int n;
-        int p;
-        cin >> n >> p;
-        while(n!=0 || p!=0){
-                a.pedina(n,p);
+        while((n!=0 || p!=0)&&(a.status()==-1)){
                 a.printa();
-                if (a.status()==-1){
-                        cout << "ciao";
-                        break;
-                }
                 cin >> n >> p;
-
+                a.pedina(n,p);
         }
 }
