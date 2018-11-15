@@ -104,10 +104,63 @@ bool griglia::checkcol(int m, int n){
             }
         }
         if(v<3){
+            for(int i=0; i<3;i++){
+            if(m-i<0){
+                break;
+            }
+            else{
+                    if(gri[m-i][n]!=p){
+                            break;
+                    }
+                    else{
+                           v++;
+                    }
+            }
+        }
+        if(v<3){
+                return false;
+        }
+        else{
+                return true;
+        }
                 
 }
 bool griglia::checkrow(int m, int n){
-
+int v=0;
+        int p=gri[m][n];
+        for(int i=0; i<3;i++){
+            if(n+i>6){
+                break;
+            }
+            else{
+                    if(gri[m][n+i]!=p){
+                            break;
+                    }
+                    else{
+                           v++;
+                    }
+            }
+        }
+        if(v<3){
+            for(int i=0; i<3;i++){
+            if(m-i<0){
+                break;
+            }
+            else{
+                    if(gri[m-i][n]!=p){
+                            break;
+                    }
+                    else{
+                           v++;
+                    }
+            }
+        }
+        if(v<3){
+                return false;
+        }
+        else{
+                return true;
+        }
 }
 //d indica che diagonale considerare, 0 è la diagonale da alto a sinistra a
 //in basso a destra, 1 è il contrario
