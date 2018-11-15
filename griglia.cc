@@ -84,7 +84,35 @@ void griglia::printa(){
         cout << "\n";
 }
 bool griglia::check(int m, int n){
+
         return false;
+}
+bool griglia::checkcol(int m, int n){
+        int v=0;
+        int p=gri[m][n];
+        for(int i=0; i<3;i++){
+            if(m+i>5){
+                break;
+            }
+            else{
+                    if(gri[m+i][n]!=p){
+                            break;
+                    }
+                    else{
+                           v++;
+                    }
+            }
+        }
+        if(v<3){
+                
+}
+bool griglia::checkrow(int m, int n){
+
+}
+//d indica che diagonale considerare, 0 è la diagonale da alto a sinistra a
+//in basso a destra, 1 è il contrario
+bool griglia::checkdiag(int m, int n, int d){
+
 }
 bool griglia::checktie(){
         for(int i=0;i<7;i++){
@@ -153,3 +181,4 @@ void griglia::clear(){
  7 1
 
  */
+
